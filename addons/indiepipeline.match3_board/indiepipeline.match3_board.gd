@@ -12,6 +12,9 @@ func _enter_tree() -> void:
 	if not DirAccess.dir_exists_absolute(MyPluginSettings.PluginTemporaryReleaseUpdateDirectoryPath):
 		DirAccess.make_dir_recursive_absolute(MyPluginSettings.PluginTemporaryReleaseUpdateDirectoryPath)
 	
+	add_custom_type("Match3Board", "Node2D", preload("src/match3_board.gd"), preload("assets/board.svg"))
+	add_custom_type("PieceDefinitionResource", "Resource", preload("src/components/pieces/piece_definition_resource.gd"), preload("assets/piece.svg"))
+
 
 func _exit_tree() -> void:
 	MyPluginSettings.remove_settings()

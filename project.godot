@@ -8,11 +8,21 @@
 
 config_version=5
 
+[Match3 Board]
+
+config/indiepipeline.match3_board/update_notification_enabled=true
+
 [application]
 
-config/name="godot-plugin-template"
+config/name="Match3 Board"
+config/description="This lightweight library provides the core logic and functionality you need to build engaging match-3 games. Focus on game design and mechanics while leaving the complex logic to this library"
+config/version="1.0.0"
 config/features=PackedStringArray("4.3", "GL Compatibility")
 config/icon="res://icon.svg"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/indiepipeline.match3_board/plugin.cfg")
 
 [rendering]
 
